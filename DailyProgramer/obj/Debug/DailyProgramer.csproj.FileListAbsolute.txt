@@ -1,6 +1,0 @@
-c:\dev\DailyProgramer\DailyProgramer\bin\Debug\DailyProgramer.exe.config
-c:\dev\DailyProgramer\DailyProgramer\bin\Debug\DailyProgramer.exe
-c:\dev\DailyProgramer\DailyProgramer\bin\Debug\DailyProgramer.pdb
-c:\dev\DailyProgramer\DailyProgramer\obj\Debug\DailyProgramer.csprojResolveAssemblyReference.cache
-c:\dev\DailyProgramer\DailyProgramer\obj\Debug\DailyProgramer.exe
-c:\dev\DailyProgramer\DailyProgramer\obj\Debug\DailyProgramer.pdb
