@@ -37,6 +37,10 @@ namespace DailyProgramer
             return Convert.ToInt32(Console.ReadLine());
         }
 
+        /// <summary>
+        /// https://www.reddit.com/r/dailyprogrammer/comments/4hhiu8/20160502_challenge_265_easy_permutations_and/
+        /// </summary>
+        /// <param name="command"></param>
         private static void PermuationsAndCombinations(string command)
         {
             var factor = GetInputAsInt("How big a tree?");
