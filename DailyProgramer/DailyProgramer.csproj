@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DogContest\Contest.cs" />
     <Compile Include="Permutations\Combination.cs" />
     <Compile Include="Permutations\Permutation.cs" />
     <Compile Include="Program.cs" />
