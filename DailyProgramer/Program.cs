@@ -10,37 +10,12 @@ namespace DailyProgramer
         {
 
             var command = GetInput("Enter a command:");
-            var factor = GetInputAsInt("How big a tree?");
+            var validCommands = new[] {"permuation","combination" };
 
-            if (command != "permutation" && command != "combination") throw new ArgumentException("Not a valid command.");
+            if (!validCommands.Contains(command)) throw new ArgumentException("Not a valid command.");
 
             try {
 
-                if (command == "permutation")
-                {
-                    var permutation = new Permutation(factor);
-                    var tree = permutation.GenerateTree();
-                    foreach (var t in tree)
-                    {
-                        Console.WriteLine(t);
-                    }
-
-
-                    var index = GetInputAsInt("Which index would you like?");
-                    var answer = tree.ElementAt(index-1);
-                    Console.WriteLine("The {0} permutation of {1} is {2}", index, factor, answer);
-                }
-
-                if(command == "combination")
-                {
-                    var size = GetInputAsInt("Max size?");
-                    var index = GetInputAsInt("Which index would you like?");
-
-                    var combo = new Combination(factor, size);
-                    var tree = combo.GenerateTree();
-                    var answer = tree.ElementAt(index-1);
-                    Console.WriteLine("The {0} combination number of {1} out of {2} us {3}", index,size, factor, answer);
-                }
             }
             catch(Exception exception)
             {
@@ -60,6 +35,36 @@ namespace DailyProgramer
         {
             Console.WriteLine(text);
             return Convert.ToInt32(Console.ReadLine());
+        }
+
+        private static void PermuationsAndCombinations(string command)
+        {
+            var factor = GetInputAsInt("How big a tree?");
+            if (command == "permutation")
+            {
+                var permutation = new Permutation(factor);
+                var tree = permutation.GenerateTree();
+                foreach (var t in tree)
+                {
+                    Console.WriteLine(t);
+                }
+
+
+                var index = GetInputAsInt("Which index would you like?");
+                var answer = tree.ElementAt(index - 1);
+                Console.WriteLine("The {0} permutation of {1} is {2}", index, factor, answer);
+            }
+
+            if (command == "combination")
+            {
+                var size = GetInputAsInt("Max size?");
+                var index = GetInputAsInt("Which index would you like?");
+
+                var combo = new Combination(factor, size);
+                var tree = combo.GenerateTree();
+                var answer = tree.ElementAt(index - 1);
+                Console.WriteLine("The {0} combination number of {1} out of {2} us {3}", index, size, factor, answer);
+            }
         }
     }
 }
